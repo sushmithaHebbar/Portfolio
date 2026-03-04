@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1f242d;
+  --color-accent: #0ef;
+  --color-accent-hover: #00d5ff;
+}
+
+:root {
+  --background: #06152e;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.multiple-text {
+  color: #0ef;
+  font-weight: 700;
+}
+
+.btn-primary {
+  @apply inline-block px-7 py-3 bg-accent text-primary rounded-lg font-semibold shadow-[0_0_10px_#0ef] transition-all duration-300 hover:bg-primary hover:text-accent hover:shadow-[0_0_20px_#0ef];
+}
+
+.social-icon {
+  @apply inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-accent rounded-full text-xl text-accent mr-4 transition-all duration-300 hover:bg-accent hover:text-primary hover:shadow-[0_0_20px_#0ef];
+}
+
+/* Animations */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-24px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
